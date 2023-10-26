@@ -15,7 +15,7 @@ onMounted(() => {
   <h4>Users</h4>
   <div class="alert alert-secondary mt-3" role="alert">
     <b>Task</b><br />In this view, the applications being listed are hard coded in the service function. Your task is to use the data from
-    <b>groups.mockup.js</b> to list the correct application for each user.
+    <b>groups.mockup.js</b> to list the correct applications for each user.
   </div>
   <table class="table mt-3">
     <thead>
