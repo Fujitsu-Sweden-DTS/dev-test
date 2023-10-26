@@ -19,7 +19,7 @@ export function getSummedAge() {
 export function getUsersIncludingApplications() {
   var result = [];
   users.forEach((user) => {
-    result.push({ ...user, applications: ["Microsoft Word (Installerad)", "Adobe Photoshop (Software center)"] });
+    result.push({ ...user, applications: ["Microsoft Word (Installed)", "Adobe Photoshop (Software center)"] });
   });
   return result;
 }
