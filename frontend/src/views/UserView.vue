@@ -15,7 +15,7 @@ onMounted(() => {
   <h4>Users</h4>
   <div class="alert alert-secondary mt-3" role="alert">
     <b>Task</b><br />
-    In this vew, there is a two-second delay when fetching user data from the backend. During this time, the user table remains empty. Your task is to enhance
+    In this view, there is a four-second delay when fetching user data from the backend. During this time, the user table remains empty. Your task is to enhance
     the user experience by implementing a loading indicator that clearly communicates to the user that the data is currently being fetched.
   </div>
   <table class="table mt-3">

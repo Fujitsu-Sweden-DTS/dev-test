@@ -1,7 +1,7 @@
 import { users } from "../mockup/user.mockup.js";
 
 export async function getUsers() {
-  await new Promise((resolve) => setTimeout(resolve, 2000));
+  await new Promise((resolve) => setTimeout(resolve, 4000));
   return users;
 }
 

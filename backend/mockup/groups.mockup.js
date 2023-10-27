@@ -8,4 +8,6 @@ export const groups = [
   { name: "APP-SC-Microsoft Word", members: ["A02"] },
   { name: "APP-IN-Adobe Photoshop", members: ["A02"] },
   { name: "APP-SC-Adobe Photoshop", members: [] },
+  { name: "APP-IN-World Of Warcraft", members: ["A01"] },
+  { name: "APP-SC-World Of Warcraft", members: ["A02", "A04", "A05"] },
 ];

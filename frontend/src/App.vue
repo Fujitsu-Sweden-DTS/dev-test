@@ -24,11 +24,12 @@ const route = useRoute();
             <router-link class="nav-link" :class="[route.path == '/' ? 'active' : '']" to="/">Home</router-link>
           </li>
           <li class="nav-item">
-            <router-link class="nav-link" :class="[route.path == '/users' ? 'active' : '']" to="/users">Users</router-link>
-          </li>
-          <li class="nav-item">
             <router-link class="nav-link" :class="[route.path == '/summedAge' ? 'active' : '']" to="/summedAge">Summed age</router-link>
           </li>
+          <li class="nav-item">
+            <router-link class="nav-link" :class="[route.path == '/users' ? 'active' : '']" to="/users">Users</router-link>
+          </li>
+
           <li class="nav-item">
             <router-link class="nav-link" :class="[route.path == '/userApplications' ? 'active' : '']" to="/userApplications">User applications</router-link>
           </li>
