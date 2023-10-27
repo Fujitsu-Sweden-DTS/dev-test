@@ -33,3 +33,7 @@ npm run dev
 ```
 
 Project should be up and running!
+
+### The test
+
+There will be instructions for the test when you start and run the application. Create a branch with your name and a pull request and push your code.
