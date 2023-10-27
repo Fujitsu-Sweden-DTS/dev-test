@@ -5,7 +5,7 @@ import { ref, onMounted } from "vue";
 const orgs = ref([]);
 
 onMounted(() => {
-  axios.get("http://localhost:3007/api/organization/list").then((res) => {
+  axios.get("http://localhost:3000/api/organization/list").then((res) => {
     orgs.value = res.data;
   });
 });
