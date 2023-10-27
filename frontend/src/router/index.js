@@ -4,6 +4,7 @@ import UserView from "../views/UserView.vue";
 import SummedAgeView from "../views/SummedAgeView.vue";
 import DynamicTableView from "../views/DynamicTableView.vue";
 import UserApplicationView from "../views/UserApplicationView.vue";
+import SlowOrganizationsView from "../views/SlowOrganizationsView.vue";
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -32,6 +33,11 @@ const router = createRouter({
       path: "/userApplications",
       name: "userApplications",
       component: UserApplicationView,
+    },
+    {
+      path: "/slowOrganizations",
+      name: "slowOrganizations",
+      component: SlowOrganizationsView,
     },
   ],
 });
