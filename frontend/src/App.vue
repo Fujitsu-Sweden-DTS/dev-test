@@ -35,6 +35,9 @@ const route = useRoute();
           <li class="nav-item">
             <router-link class="nav-link" :class="[route.path == '/dynamicTable' ? 'active' : '']" to="/dynamicTable">Dynamic table</router-link>
           </li>
+          <li class="nav-item">
+            <router-link class="nav-link" :class="[route.path == '/slowOrganizations' ? 'active' : '']" to="/slowOrganizations">Slow organizations</router-link>
+          </li>
         </ul>
       </div>
     </div>
