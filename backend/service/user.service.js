@@ -1,4 +1,5 @@
 import { users } from "../mockup/user.mockup.js";
+import { groups } from "../mockup/groups.mockup.js";
 
 export async function getUsers() {
     await new Promise((resolve) => setTimeout(resolve, 4000));
@@ -20,12 +21,20 @@ export function getSummedAge() {
 export function getUsersIncludingApplications() {
     var result = [];
     users.forEach((user) => {
+        var groupsResult = [];
+        groups.forEach((group) => {
+            if (group.members.includes(user.username)) {
+                var prefix = group.name.split("-", 3)[2];
+                var suffix = group.name.includes("APP-IN")
+                    ? " (Installed)"
+                    : " (Software Center)";
+                var updatedName = prefix + suffix;
+                groupsResult.push(updatedName);
+            }
+        });
         result.push({
             ...user,
-            applications: [
-                "Microsoft Word (Installed)",
-                "Adobe Photoshop (Software center)",
-            ],
+            applications: groupsResult,
         });
     });
     return result;
