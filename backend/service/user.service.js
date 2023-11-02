@@ -24,11 +24,11 @@ export function getUsersIncludingApplications() {
         var groupsResult = [];
         groups.forEach((group) => {
             if (group.members.includes(user.username)) {
-                var prefix = group.name.split("-", 3)[2];
-                var suffix = group.name.includes("APP-IN")
+                const prefix = group.name.split("-", 3)[2];
+                const suffix = group.name.includes("APP-IN")
                     ? " (Installed)"
                     : " (Software Center)";
-                var updatedName = prefix + suffix;
+                const updatedName = prefix + suffix;
                 groupsResult.push(updatedName);
             }
         });
