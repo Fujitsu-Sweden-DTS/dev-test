@@ -9,8 +9,9 @@ export function getSummedAge() {
   const summedAge = users.reduce((accumulator, user) => {
     //Age can be a number or "unknown"
     if (Number.isInteger(user.age)) {
-      return accumulator + user.age;
+      return accumulator += user.age;
     }
+    return accumulator;
   }, 0);
 
   return { result: `Summed age is ${summedAge}` };

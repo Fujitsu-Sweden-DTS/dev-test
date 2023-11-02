@@ -3,10 +3,12 @@ import axios from "axios";
 import { ref, onMounted } from "vue";
 
 const users = ref([]);
+const isLoading = ref(true);
 
 onMounted(() => {
   axios.get("http://localhost:3000/api/users/").then((res) => {
     users.value = res.data;
+    isLoading.value = false;
   });
 });
 </script>
@@ -18,7 +20,10 @@ onMounted(() => {
     In this view, there is a four-second delay when fetching user data from the backend. During this time, the user table remains empty. Your task is to enhance
     the user experience by implementing a loading indicator that clearly communicates to the user that the data is currently being fetched.
   </div>
-  <table class="table mt-3">
+  <div v-if="isLoading">
+    <p style="text-align: center;">Loading...</p>
+  </div>
+  <table class="table mt-3" v-else>
     <thead>
       <tr>
         <th scope="col">username</th>
