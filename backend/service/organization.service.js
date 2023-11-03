@@ -1,13 +1,18 @@
 import * as organizationUtils from "../utils/organization.utils.js";
 
 export async function getOrganizationData() {
-  // Fetch data from source
-  const organizationNames = await organizationUtils.getOrganizationNames();
+    const organizationData = [
+        organizationUtils.getOrganizationNames(),
+        organizationUtils.getOrganizationLocations(),
+        organizationUtils.getOrganizationManagers(),
+    ];
 
-  const organizationLocations = await organizationUtils.getOrganizationLocations();
+    const [organizationNames, organizationLocations, organizationManagers] =
+        await Promise.all(organizationData);
 
-  const organizationManagers = await organizationUtils.getOrganizationManagers();
-
-  // Concatenate organizational data into a tidy collection
-  return organizationUtils.concatenateOrganizationalData(organizationNames, organizationLocations, organizationManagers);
+    return organizationUtils.concatenateOrganizationalData(
+        organizationNames,
+        organizationLocations,
+        organizationManagers
+    );
 }
